@@ -1,0 +1,26 @@
+
+
+{% extends 'base.html' %}
+
+{% block titulo %}
+
+Lista de lectores
+
+{% endblock titulo%}
+
+{% block contenido %}
+    <h1>
+      Bienvenidos, les saluda 
+    </h1>
+
+    <h3>Lectores inscritos:</h3>
+    <ul>
+    {% for lector in lectores %}
+      <li>
+        {{ lector.apellido}}, {{ lector.nombre}}
+        
+      </li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
